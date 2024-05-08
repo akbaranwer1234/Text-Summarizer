@@ -160,7 +160,10 @@ cython_debug/
 #.idea/
 
 # Ignore log files
-logs/
+logs/*
 
 # Ignore environment-specific files
-venv/
+venv/*
+
+# Ignore data files
+artifact/*
