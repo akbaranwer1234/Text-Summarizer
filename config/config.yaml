@@ -13,3 +13,24 @@ data_validation:
   STATUS_FILE: artifacts/data_validation/status.txt # True false, if available or incorrect format or not
   ALL_REQUIRED_FILES: ["train", "test", "validation"]
 
+
+# Data transformation
+data_transformation:
+  root_dir: artifacts/data_transformation
+  data_path: artifacts/data_ingestion/samsum_dataset # True false, if available or incorrect format or not
+  tokenizer_name: google/pegasus-cnn_dailymail
+
+# Model Trainer
+model_trainer:
+  root_dir: artifacts/model_trainer
+  data_path: artifacts/data_transformation/samsum_dataset # True false, if available or incorrect format or not
+  model_ckpt: google/pegasus-cnn_dailymail
+
+# Model Evaluation
+model_evaluation:
+  root_dir: artifacts/model_evaluation
+  data_path: artifacts/data_transformation/samsum_dataset # True false, if available or incorrect format or not
+  model_path: artifacts/model_trainer/pegasus-samsum-model
+  tokenizer_path: artifacts/model_trainer/tokenizer
+  metric_file_name: artifacts/model_evaluation/metrics.csv
+
