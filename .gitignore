@@ -166,4 +166,4 @@ logs/*
 venv/*
 
 # Ignore data files
-artifact/*
+artifacts/*
