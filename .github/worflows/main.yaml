@@ -88,8 +88,8 @@ jobs:
 
       #  for the very first time, just comment it and for next time, uncomment it   
       # - name: Stop and remove container if running
-      #   run: |
-      #    docker ps -q --filter "name=textSummarizer" | grep -q . && docker stop texts && docker rm -fv texts
+        run: |
+         docker ps -q --filter "name=textSummarizer" | grep -q . && docker stop texts && docker rm -fv texts
        
       - name: Run Docker Image to serve users
         run: |
